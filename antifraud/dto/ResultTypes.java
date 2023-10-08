@@ -1,5 +1,5 @@
 package antifraud.dto;
 
-public enum ResultType {
+public enum ResultTypes {
     ALLOWED, PROHIBITED, MANUAL_PROCESSING
 }

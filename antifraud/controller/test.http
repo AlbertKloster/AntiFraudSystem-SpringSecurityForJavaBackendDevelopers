@@ -1,2 +1,24 @@
-POST localhost:28852/api/antifraud/transaction
+POST localhost:28852/api/auth/user
 Content-Type: application/json
+
+{
+  "name": "John Doe",
+  "username": "JohnDoe",
+  "password": "secret"
+}
+
+###
+GET localhost:28852/actuator
+
+###
+GET localhost:28852/api/auth/list
+Authorization: Basic JohnDoe secret
+
+###
+POST localhost:28852/api/antifraud/transaction
+Authorization: Basic JohnDoe secret
+Content-Type: application/json
+
+{
+  "amount": 1200
+}
